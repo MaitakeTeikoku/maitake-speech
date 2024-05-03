@@ -170,7 +170,7 @@ function Main(): JSX.Element {
             <Grid item xs={2}>
               <Tooltip arrow
                 title={
-                  isOnAudioStart
+                  isOnSpeechStart
                     ? "発話検出中..."
                     : "発話未検出"
                 }
