@@ -1,28 +1,29 @@
 import {
+  Tooltip,
   IconButton
 } from "@mui/material";
 import {
-  ContentCopy as ContentCopyIcon
+  CopyAll as CopyAllIcon
 } from "@mui/icons-material";
 import { useStateContext } from "../utils/StateContext";
 
 interface CopyButtonProps {
-  interimText: string,
-  textList: string[]
+  interimText: string;
+  finalTextList: string[];
 }
 
-function CopyButton({
-  textList,
+function CopyAllButton({
+  finalTextList,
   interimText
 }: CopyButtonProps): JSX.Element {
   const {
     createMessage
   } = useStateContext();
 
-  const copy = () => {
-    const copiedText = `${textList.join("\n")}\n${interimText}`;
+  const copyAll = () => {
+    const copyAllText = `${finalTextList.join("\n")}\n${interimText}`;
     try {
-      navigator.clipboard.writeText(copiedText)
+      navigator.clipboard.writeText(copyAllText)
         .then(() => {
           createMessage("コピー成功！", "success");
         })
@@ -35,14 +36,18 @@ function CopyButton({
   }
 
   return (
-    <IconButton
-      onClick={copy}
-      size="large"
-      color="inherit"
+    <Tooltip arrow
+      title="すべてコピー"
     >
-      <ContentCopyIcon />
-    </IconButton>
+      <IconButton
+        onClick={copyAll}
+        size="large"
+        color="inherit"
+      >
+        <CopyAllIcon />
+      </IconButton>
+    </Tooltip>
   );
 }
 
-export default CopyButton;
+export default CopyAllButton;
