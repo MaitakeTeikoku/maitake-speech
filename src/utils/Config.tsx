@@ -41,18 +41,7 @@ export const helpList = [
               </li><li>
                 {"個人情報や機密情報は入力しないようにしてください。"}
               </li></ul>
-          </li><li>
-              {"Google AdSenseについて"}
-              <ul style={listStyle}><li>
-                {"当サイトではGoogle AdSenseを利用しています。"}
-              </li><li>
-                  {"Googleなどの第三者配信事業者がCookieを使用して、ユーザがそのウェブサイトや他のウェブサイトに過去にアクセスした際の情報に基づいて広告を配信します。"}
-                </li><li>
-                  {"Googleが広告Cookieを使用することにより、ユーザーがそのサイトや他のサイトにアクセスした際の情報に基づいて、Googleやそのパートナーが適切な広告をユーザに表示します。"}
-                </li><li>
-                  {"ユーザは、広告設定でパーソナライズ広告を無効にできます。または、www.aboutads.info にアクセスすれば、パーソナライズ広告に使われる第三者配信事業者のCookieを無効にできます。"}
-                </li></ul>
-            </li></ol>
+          </li></ol>
         </Typography>
       </div>
     )
