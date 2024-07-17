@@ -17,6 +17,19 @@
     npm install @mui/material @emotion/react @emotion/styled
     npm install @mui/icons-material
     ```
+1. Reactのpackage.jsonの2行目に以下を追記。
+    ```json
+    "homepage": "https://MaitakeTeikoku.github.io/maitake-speech",
+    ```
+1. .github/workflowsにYAMLファイルを作成。以下の箇所はリポジトリ名に変更。
+    ```yaml
+    jobs:
+      build:
+        steps:
+          name: Build
+            env:
+              PUBLIC_URL: /maitake-speech
+    ```
 1. コミットしてプッシュ。
     ```bash
     git add .
@@ -32,7 +45,6 @@
         git config http.postBuffer 524288000
         git config --global http.version HTTP/1.1
         ```
-
 
 
 # Getting Started with Create React App
