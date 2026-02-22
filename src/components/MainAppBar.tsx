@@ -26,7 +26,7 @@ function MainAppBar(): JSX.Element {
             >
               <Avatar
                 alt="Maitake"
-                src={`${process.env.PUBLIC_URL}/logo192.png`}
+                src="/logo192.png"
               />
             </IconButton>
           </Tooltip>
